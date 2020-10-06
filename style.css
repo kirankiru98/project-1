@@ -1,0 +1,186 @@
+* {
+    box-sizing: border-box;
+}
+
+*::after {
+    box-sizing: border-box;
+}
+
+*::before {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    margin: 0;
+    padding: auto;
+    font-size: 14px;
+    font-family: "Manrope", sans-serif;
+    max-width: 1440px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    display: flex;
+    height: 275px;
+    width: 750px;
+    border-radius: 10px;
+    box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.4);
+}
+
+.section-one {
+    height: 100%;
+    width: 40%;
+    padding: 0;
+}
+
+.section-one img {
+    width: 100%;
+    height: 100%;
+}
+
+.section-two {
+    width: 60%;
+    padding: 25px 40px;
+    height: 100%;
+}
+
+.section-two h2 {
+    color: #48556a;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.section-two p {
+    color: #6d7f97;
+}
+
+.info {
+    height: 40px;
+}
+
+.info .avatar {
+    float: left;
+    width: 40px;
+    height: inherit;
+}
+
+.info .avatar img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.info .content {
+    float: left;
+    margin-left: 15px;
+}
+
+.info .content h4,
+.info .content p {
+    margin: 0;
+}
+
+.info .share {
+    transform: scale(0.8);
+    border-radius: 50%;
+    padding: 12px;
+    float: right;
+    background-color: #ecf2f8;
+    width: 40px;
+    height: inherit;
+}
+
+.info .share img {
+    width: 100%;
+    height: 100%;
+}
+
+#tippt-1 {
+    margin-bottom: 12px;
+}
+
+.tippy-box[data-theme~=custom] {
+    background-color: #48556a;
+    color: #9eafc2;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+
+.box-icons {
+    width: 200px;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-around;
+}
+
+.box-icons p {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.tippy-box[data-theme~=custom][data-placement^=top]>.tippy-arrow::before {
+    border-top-color: #48556a;
+}
+
+.tippy-box[data-theme~=custom][data-placement^=bottom]>.tippy-arrow::before {
+    border-bottom-color: #48556a;
+}
+
+.tippy-box[data-theme~=custom][data-placement^=left]>.tippy-arrow::before {
+    border-left-color: #48556a;
+}
+
+.tippy-box[data-theme~=custom][data-placement^=right]>.tippy-arrow::before {
+    border-right-color: #48556a;
+}
+
+
+/* Hover states */
+
+@media screen and (max-width: 576px) {
+    body {
+        height: 100%;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+        height: inherit;
+        width: 100%;
+        border-radius: 0px;
+        box-shadow: 0px 0px 0px 0px transparent;
+    }
+    .section-one {
+        height: 35%;
+        width: inherit;
+        float: none;
+        padding: 0;
+    }
+    .section-one::after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+    .section-two {
+        height: 65%;
+        width: inherit;
+        padding: 30px 40px;
+        height: 100%;
+    }
+    .section-two h2 {
+        font-size: 1.25em;
+    }
+    .section-two p {
+        font-size: 15px;
+    }
+    .info .share {
+        transform: scale(0.9);
+        border-radius: 50%;
+    }
+}
